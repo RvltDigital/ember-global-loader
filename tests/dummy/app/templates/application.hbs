@@ -1,0 +1,24 @@
+<h1>Ember Global Loader</h1>
+
+<div class="menu">
+    <div class="menu__label">menu</div>
+    <ul class="menu__list">
+        <li class="menu__list-item"><LinkTo @route="index">Index</LinkTo></li>
+        <li class="menu__list-item"><LinkTo @route="first">First</LinkTo></li>
+        <li class="menu__list-item"><LinkTo @route="second">Second</LinkTo></li>
+        <li class="menu__list-item menu__list-item--special"><a href="javascript:void(0)" onclick={{ this.letsLoad }}>Let's load</a></li>
+    </ul>
+</div>
+
+<div class="content">
+    <div class="content__label">content</div>
+    <div class="content__inner">
+        {{outlet}}
+    </div>
+</div>
+
+<IfLoading>
+    <div class="loader">
+        <div class="loader__inner"></div>
+    </div>
+</IfLoading>
